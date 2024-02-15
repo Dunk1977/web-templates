@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .class-nav {
+            background-color: black;
+            display: flex;
+            color: white;
+            height: 5vh;
+        }
+
+        .class-body {
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            height: 95vh;
+            color: white;
+            gap: 5px;
+        }
+
+        .input-area {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .tb {
+            width: 90%;
+            max-width: 390px;
+        }
+    </style>
+</head>
+<body>
+    <div class="class-nav">
+        <p> this is nav bar</p>
+    </div>
+
+    <div class="class-body">
+        <p> this is content</p>
+        <div class="input-area">
+            <input type="text" name="text" placeholder="some text" class="tb"> 
+            <input type="text" name="text2" placeholder="some text" class="tb"> 
+            <input type="text" name="text2" placeholder="some text" class="tb"> 
+
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

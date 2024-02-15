@@ -11,6 +11,8 @@
         }
 
         body {
+            background: linear-gradient(#FBFADA, white  );
+            /* background-color: black; */
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -79,33 +81,103 @@
             display: none;
         }
 
-        .contentArea {
-            background-color: #FBFADA;
-            display: grid;
-            width: 100%;
+        .content-container {
             height: 100vh;
-            justify-content: center;
+            display: flex;
             align-items: center;
+            justify-content: space-evenly;
         }
 
-        .container { 
-            
-            background-color: white;
-            display: grid;
-            margin: 0 auto;
-            padding: 20px;
+        .content-left {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+
+
+        .left-containter-title h2 {
+            font-weight: 600;
+            color: #12372A;
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .left-containter-title hr {
+            border: none;
+            width: 300px;
+            height: 5px;
+            background-color: #12372A;
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+        }
+
+        .form-inputs {
+            width: 600px;
             width: 80%;
-            
+            max-width: 600px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #666;
+            border-radius: 20px;
+        }
+
+        .form-inputs:focus {
+            border: 2px solid #12372A;
+        }
+
+        .form-inputs::placeholder {
+            color: #a9a9a9;
 
         }
 
-        .container textarea {
-            height: 500px;
-            width: 100%;
-            max-height: 80vh;
-            resize: vertical;
+        .button-box {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+
+        }
+        .button-box button {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #FBFADA; 
+            gap: 10px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(270deg, #ADBC9F, #12372A);
+            cursor: pointer;
+
+        }
+        .content-left textarea {
+            width: 80%;
+            max-width: 80%;
+            /* height: 80%;
+            height: 500px; */
+            height: 60vh;
+            max-height: 500px;
+            padding-top: 15px;
+            border-radius: 20px;
+
         }
 
+        .content-right {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-right img {
+            width: 500px;
+            max-width: 80%;
+            height: auto;
+
+        }
         @media(max-width: 600px) {
             .hideOnMobile {
                 display: none;
@@ -114,11 +186,23 @@
             .menu-button { 
                 display: block;
             }
+
+            .form-inputs {
+                width: 80vw;
+            }
+
+            .content-right {
+                display: none;
+            }
         }
 
         @media(max-width: 400px) {
             .sidebar {
                 width: 100%;
+            }
+
+            .content-left textarea {
+                height: 40vh;
             }
         }
     </style>
@@ -144,19 +228,31 @@
     </nav>
 
 
-    <div class="contentArea">
-        <div class="container">
-
-            <label for="blog-title">Blog Title:</label>
-            <input type="text" id="blog-title" name="blogTitle">
-            <label for="blog-content">Blog Content:</label>
-            <textarea id="blog-content" name="blogContent"></textarea>
-
-            <div class="btn-group">
-                <button class="btn-save">Save</button>
-                <button class="btn-cancel">Cancel</button>
+    <div class="content-container">
+        <form action="" class="content-left">
+            <div class="left-containter-title">
+                <h2> Enter Your Blog Here </h2>
+                <hr>
             </div>
+
+            <input type="text" name="title" placeholder="Title of the blog" class="form-inputs" required> 
+            <textarea name="blog" placeholder="Enter your Blog Content" class="form-inputs" required></textarea>
+            <div class="button-box">
+                <button type="submit" class="form-buttons"> Save</button>
+                <button type="cancel" class="form-buttons"> Cancel</button>
+            </div>
+                
+
+
+        </form>
+
+        <div class="content-right">
+            <img src="images/hiranminar.avif">
+
+
         </div>
+
+    </div>
         
     </div>
     <script>
