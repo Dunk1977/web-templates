@@ -8,6 +8,7 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -90,11 +91,46 @@
             background-color: white;
         }
 
-        .posts-box {
-            height: 100vh;
-            background-color: white;
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #FBFADA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 90px;
+        }
+
+        .content-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            /* gap: 20px; */
+        }
+
+        .content-section .card {
+            flex: 1;
+            margin: 20px 20px;
+            box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
 
         }
+
+        .content-section .card h2 {
+            margin: 15px 0px;
+            font-size: 28px;
+            color:#12372A;
+            /* font-family: sans-serif; */
+        }
+
+        .content-section .card p {
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 0px 10px;
+            margin-bottom: 20px;
+        }
+
         @media(max-width: 600px) {
             .hideOnMobile {
                 display: none;
@@ -134,8 +170,26 @@
 
     </nav>
 
-    <div class="posts-box">
+    <div class="container">
+        <div class="content-section">
+            <div class="card">
+                <h2> Lessons on greed from Abha </h2>
+                <p> Whenever you embark on a journey, the unfamiliar surroundings and challenges can serve as profound teachers. The lessons learned in such moments are often etched into your memory, as they come amidst the backdrop of perseverance and a tested spirit. In a foreign land where roads and pathways are unfamiliar, and your mind and body may feel defeated, it is your soul that propels you forward. Nature, in these moments, imparts lessons that penetrate not just your body and mind but directly enter into your soul, leaving lasting imprints. </p>
 
+            </div>
+
+            <div class="card">
+                <h2> Lessons 2 </h2>
+                <p> Whenever you embark on a journey, the unfamiliar surroundings and challenges can serve as profound teachers. The lessons learned in such moments are often etched into your memory, as they come amidst the backdrop of perseverance and a tested spirit. In a foreign land where roads and pathways are unfamiliar, and your mind and body may feel defeated, it is your soul that propels you forward. Nature, in these moments, imparts lessons that penetrate not just your body and mind but directly enter into your soul, leaving lasting imprints. </p>
+            </div>
+
+            <div class="card">
+                <h2> Lessons 3 </h2>
+                <p> Whenever you embark on a journey, the unfamiliar surroundings and challenges can serve as profound teachers. The lessons learned in such moments are often etched into your memory, as they come amidst the backdrop of perseverance and a tested spirit. In a foreign land where roads and pathways are unfamiliar, and your mind and body may feel defeated, it is your soul that propels you forward. Nature, in these moments, imparts lessons that penetrate not just your body and mind but directly enter into your soul, leaving lasting imprints. </p>
+            </div>
+
+
+        </div>
     </div>
 
         
